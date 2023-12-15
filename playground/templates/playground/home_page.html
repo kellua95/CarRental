@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'style-cars.css' %}">
+
+<section>
+<div class="car-catogery">
+
+        {% for type in collection %}
+        
+            <div class="row">
+              <img src="{% static type.image %}" />
+              <h3  href="{% url 'home' %}?q={{type.name}}" style="margin-top: 10px">{{type.name}}</h3>
+            </div>
+        {% endfor %}
+</div>
+
+<div class="car-list">
+        {% for car in cars %}
+        <div class="card">
+            <div class="card-image">
+                <img src="{% static car.imageLink %}" alt="CAR" />
+            </div>
+            <p class="card-title">{{car.creator}} {{car.name}} </p>
+            <p class="card-body">{{car.pricePerDay}} JO / DAY</p>
+            <p class="card-body">{{car.pricePerMonth}} JO / MONTH</p>
+            <a href="/car/{{car.id}}">
+                <button class="btn">DETAILS</button>
+            </a>
+          </div>
+        
+        {% endfor %}
+</div>
+</section>
+        {% endblock content %}
+
+        
+</div>

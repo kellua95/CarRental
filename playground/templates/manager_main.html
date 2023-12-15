@@ -1,0 +1,48 @@
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'car_cards.css' %}">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Car rentel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+	<div class="nav-container">
+		<div>
+			<a href="manager-view" style="margin-bottom: 5%;">
+				<h1>LOGO</h1>
+			</a>
+			
+			<a href="/logout"> logout </a>
+		</div>
+
+		<div>
+			<form method="GET" action="{% url 'manager-view' %}">
+				<input class="search-bar" type="text" name="q" placeholder="Search for Car" />
+			
+			</form>
+		</div>
+
+		<div>
+			<button style="margin-left: 70%; width: 30%;" class="btn fill" onclick="window.location.href='/add-car/{{car.id}}';">+ ADD CAR</button>
+			
+			<button style="margin-left: 70%; margin-top: 5%; width: 30%;" class="btn outline" onclick="window.location.href='/register';">give an accses</button>
+		</div>
+
+
+
+	</div>
+	<hr>
+
+
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+
+</html>

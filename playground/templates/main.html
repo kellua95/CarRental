@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Car rentel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+
+
+
+
+    <header>
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'style-cars.css' %}">
+      <div class="headerh">
+        <a href="/">
+            <img
+            src="{% static 'jordandrive-rentals-high-resolution-logo-transparent.png' %}"
+            alt="logo"
+            />
+        </a>
+        <nav>
+          <lu class="navh">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </lu>
+        </nav>
+        <form method="GET" action="{% url 'home' %}">
+            <div class="search__container">
+                <input
+                    class="search__input"
+                    type="text"
+                    placeholder="Search for cars and models"
+                    name="q"
+                />
+        
+            </div>
+        </form>
+      </div>
+    </header>
+    <div class="bac-img">
+      <h1>Jordan Drive Rentals</h1>
+      <p>Your Ultimate Car Rental Experience</p>
+    </div>
+    <div class="bac-div-img">
+    </div>
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="{% static 'img/bmw-logo-2020-gray-download.png' %}" alt="My image">
+        <img src="{% static 'img/Chevrolet-logo-2013-2560x1440.png' %}">
+        <img src="{% static 'img/ford-logo-2017-download.png' %}">
+        <img src="{% static 'img/honda-logo-2000-full-download.png' %}">
+        <img src="{% static 'img/hyundai-logo-2011-download.png' %}">
+        <img src="{% static 'img/mazda-logo-2018-vertical-download.png' %}">
+        <img src="{% static 'img/Mercedes-Benz-logo-2011-1920x1080.png' %}">
+        <img src="{% static 'img/nissan-logo-2020-black.png' %}">
+        <img src="{% static 'img/toyota-logo-2020-europe-download.png' %}">
+      </div>
+      <div class="logos-slide">
+        <img src="{% static 'img/bmw-logo-2020-gray-download.png' %}">
+        <img src="{% static 'img/Chevrolet-logo-2013-2560x1440.png' %}">
+        <img src="{% static 'img/ford-logo-2017-download.png' %}">
+        <img src="{% static 'img/honda-logo-2000-full-download.png' %}">
+        <img src="{% static 'img/hyundai-logo-2011-download.png' %}">
+        <img src="{% static 'img/mazda-logo-2018-vertical-download.png' %}">
+        <img src="{% static 'img/Mercedes-Benz-logo-2011-1920x1080.png' %}">
+        <img src="{% static 'img/nissan-logo-2020-black.png' %}">
+        <img src="{% static 'img/toyota-logo-2020-europe-download.png' %}">
+      </div>
+    </div>
+
+    <body>    
+        {% block content %}
+    
+    
+        {% endblock %}
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">our services</a></li>
+                  <li><a href="#">privacy policy</a></li>
+                  <li><a href="#">affiliate program</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">contact us</a></li>
+                  <li><a href="#">returns</a></li>
+                  <li><a href="#">order status</a></li>
+                  <li><a href="#">payment options</a></li>
+                </ul>
+              </div>
+              <div class="footer-col-sci">
+                <h4>follow us</h4>
+                <div class="social-links">
+                  <ul class="sci">
+                    <li>
+                      <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    </li>
+                    <li>
+                      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    </li>
+                    <li>
+                      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </li>
+                    <li>
+                      <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+        </footer>
+      </body>
+      <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    
+    </body>
+    
+</html>

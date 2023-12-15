@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JordanDriveRentals</title>
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGSVUlxvHRsxOFp2tRIRUIe-xroNt38kpjWw&usqp=CAU"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styels.css' %}">
+  </head>
+  <body>
+    <header>
+      <div class="headerh">
+        <img
+          src="{% static 'jordandrive-rentals-high-resolution-logo-transparent.png' %}"
+          alt="logo"
+        />
+        <nav>
+          <lu class="navh">
+            <li><a href="/">Home</a></li>
+            <li><a href="/home">Cars</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="/FAQs">FAQs</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </lu>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div class="MainContent">
+        <div class="Mtext">
+          <h1>Welcome to JordanDrive Rentals</h1>
+          <p>
+            Discover our luxurious selection of rental cars. We provide a
+            seamless and enjoyable car rental experience to make your journey
+            comfortable and convenient.
+          </p>
+          <a href="cars.html" class="btn">Explore Our Fleet</a>
+        </div>
+        <div class="Mimg">
+          <img src="{% static 'jonas-junk-54d38tjO7EU-unsplash.jpg' %}" alt="img" />
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">contact us</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col-sci">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <ul class="sci">
+                <li>
+                  <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                </li>
+                <li>
+                  <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                </li>
+                <li>
+                  <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </li>
+                <li>
+                  <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </footer>
+
+  </body>
+  <script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+</html>

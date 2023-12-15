@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% if rentelStatus %}
+<h1 style="display: inline; color: #999999;">{{cars.creator}} </h1> 
+{% else %}
+<h1 style="display: inline;">{{cars.creator}} </h1> 
+{% endif %}
+<h2 style="display: inline;">{{cars.name}}</h2>
+<h2>{{cars.model}}</h2>
+<img src="{{cars.imageLink}}" alt="alternatetext">
+<h3>{{cars.collection}}</h3>
+<p>{{ cars.description }}</p>
+<h2 style="display: inline;">{{cars.pricePerDay}}</h2>
+<h2 style="display: inline;">{{cars.pricePerMonth}}</h2>
+
+
+          
+
+
+{% endblock content %}

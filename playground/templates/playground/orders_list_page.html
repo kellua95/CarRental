@@ -1,0 +1,34 @@
+{% extends 'manager_main.html' %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'car_cards.css' %}">
+
+<style>
+    .home-container{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+
+}
+</style>
+<div class="home-container">
+{% for cu in cus %}
+<div>
+	<div class="container">
+		<div class="wrapper">
+			<div class="banner-image" style="background-image: url({{cu.car.imageLink}});"> </div>
+			<h2 style="font-family: 'Righteous', sans-serif; color: rgba(255,255,255,0.98); text-transform: uppercase; font-size: 1.4rem;"> {{cu.name}} </h2>
+			<p>car: {{ cu.car.creator }} {{ cu.car.name }} <br> orderd from: {{cu.orderAt}} <br> to: {{cu.endDate}} </p>
+		</div>
+		<div class="button-wrapper"> 
+				<button class="btn outline" onclick="window.location.href='/delete-order/{{cu.id}}';">delete</button>
+				<button class="btn fill" onclick="window.location.href='/';">EDIT</button>
+		</div>
+	</div> 
+</div>
+{% endfor %}
+</div>
+
+{% endblock content %}
+

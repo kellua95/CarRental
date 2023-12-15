@@ -1,0 +1,65 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+
+	{% load static %}
+		<link rel="stylesheet" href="{% static 'login.css' %}">
+
+	{% if page == 'login' %}
+		<div class="container">
+			<div class="screen">
+				<div class="screen__content">
+					<form class="login" method="POST" action="">
+						{% csrf_token %}
+
+						{% if messages %}
+						<ul class="messages">
+							{% for message in messages %}
+							<li {% if message.tags %} class="{{message.tags}}" {% endif %}> {{message}} </li>
+							{% endfor %}
+						</ul>
+						{% endif %}
+
+						<div class="login__field">
+							<i class="login__icon fas fa-user"></i>
+							<input name="username" type="text" class="login__input" placeholder="User name / Email">
+						</div>
+						<div class="login__field">
+							<i class="login__icon fas fa-lock"></i>
+							<input name="password" type="password" class="login__input" placeholder="Password">
+						</div>
+						<button class="button login__submit" name="Login" type="submit">
+							<span  class="button__text">Log In Now</span>
+							<i class="button__icon fas fa-chevron-right"></i>
+						</button>				
+					</form>
+					<div class="social-login">
+						<h3>log in via</h3>
+						<div class="social-icons">
+							<a href="#" class="social-login__icon fab fa-instagram"></a>
+							<a href="#" class="social-login__icon fab fa-facebook"></a>
+							<a href="#" class="social-login__icon fab fa-twitter"></a>
+						</div>
+					</div>
+				</div>
+				<div class="screen__background">
+					<span class="screen__background__shape screen__background__shape4"></span>
+					<span class="screen__background__shape screen__background__shape3"></span>		
+					<span class="screen__background__shape screen__background__shape2"></span>
+					<span class="screen__background__shape screen__background__shape1"></span>
+				</div>		
+			</div>
+		</div>
+
+	{% else %}
+<div>
+	<form method="POST" action="">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Register">
+	</form>
+</div>
+	{% endif %}
+{% endblock content %}

@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JordanDriveRentals</title>
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGSVUlxvHRsxOFp2tRIRUIe-xroNt38kpjWw&usqp=CAU"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style-contact.css' %}">
+  </head>
+  <body>
+    <section class="contact">
+      <div class="content">
+        <h2>Contact us</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          sinces
+        </p>
+      </div>
+      <div class="container">
+        <div class="contactInfo">
+          <div class="box">
+            <div class="icon"><ion-icon name="call-outline"></ion-icon></div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>000-000-0000</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon"><ion-icon name="mail-outline"></ion-icon></div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>it.fac@yu.edu.jo</p>
+            </div>
+          </div><a href=" https://it.yu.edu.jo/">
+          <div class="box">
+            <div class="icon"><ion-icon name="globe-outline"></ion-icon></div>
+            <div class="text">
+              <h3>Website</h3>
+              <p>www.it.yu.edu.jo</p>
+            </div>
+          </div>
+        </a>
+          <h2 class="txt">Connect with us</h2>
+          <ul class="sci">
+            <li>
+              <a href="https://web.facebook.com/groups/278361476116528/?ref=bookmarks&_rdc=1&_rdr"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/ItYarmouk"><ion-icon name="logo-twitter"></ion-icon></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/school/yarmoukuniversity/posts/?feedView=all"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/yarmouk_university/"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+        <div class="contactForm">
+          <form action="" method="post">
+            {% csrf_token %} 
+            <h2>Send Message</h2>
+            <div class="inputBox">
+              <input type="text" name="fname" required="required" />
+              <span>Full Name</span>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="mail" required="required" />
+              <span>Email</span>
+            </div>
+            <div class="inputBox">
+              <textarea required="required" name="message"> </textarea>
+              <span>Type your Message</span>
+            </div>
+            <div class="inputBox">
+              <input type="submit" value="Send" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
